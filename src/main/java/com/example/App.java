@@ -6,7 +6,7 @@ public class App {
 
     static Logger logger = Logger.getLogger(App.class.getName());
 
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) {
 
         Calculator calc = new Calculator();
 
