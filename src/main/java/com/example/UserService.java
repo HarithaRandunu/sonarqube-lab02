@@ -3,8 +3,11 @@ package com.example;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.Statement;
+import java.util.logging.Logger;
 
 public class UserService {
+
+    Logger logger = Logger.getLogger(UserService.class.getName());
 
     // SECURITY ISSUE: Hardcoded credentials
     private String password = "admin123";
@@ -20,7 +23,7 @@ public class UserService {
 
             st.executeQuery(query);
         } catch (java.sql.SQLException e) {
-            e.printStackTrace();
+            logger.severe("SQL Exception: " + e.getMessage());
             // Handle exception appropriately
         }
     }
